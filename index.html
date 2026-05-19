@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emaan Aarbi | CS Student & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <div class="logo">
+          <span class="logo-bracket">&lt;</span>Emaan<span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-socials">
+          <a href="https://github.com/EmaanAarbi" target="_blank" class="social-icon" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/emaan-aarbi-b254712a7/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Sidebar -->
+      <ul class="sidebar" id="sidebar">
+        <li class="sidebar-close">
+          <button onclick="hideSidebar()" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28" fill="currentColor">
+              <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+            </svg>
+          </button>
+        </li>
+        <li><a href="#home" onclick="hideSidebar()">Home</a></li>
+        <li><a href="#about" onclick="hideSidebar()">About</a></li>
+        <li><a href="#skills" onclick="hideSidebar()">Skills</a></li>
+        <li><a href="#projects" onclick="hideSidebar()">Projects</a></li>
+        <li><a href="#contact" onclick="hideSidebar()">Contact</a></li>
+        <li class="sidebar-socials">
+          <a href="https://github.com/EmaanAarbi" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/emaan-aarbi-b254712a7/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text reveal-left">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Emaan Aarbi</h1>
+          <h2 class="hero-role">
+            <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-bio">
+            CS student at GCWUF passionate about building meaningful digital experiences — from AI-powered Python tools to full-stack web systems.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-outline">Get In Touch</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">6+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Tech Stacks</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">8th</span>
+              <span class="stat-label">Semester</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image reveal-right">
+          <div class="image-ring">
+            <div class="image-ring-inner">
+              <img src="home.jpg" alt="Emaan Aarbi" />
+            </div>
+          </div>
+          <div class="floating-badge badge-1">
+            < Python
+          </div>
+          <div class="floating-badge badge-2">
+             JWT
+          </div>
+          <div class="floating-badge badge-3">
+            Django
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal-section">
+      <div class="section-container">
+        <div class="about-image-wrap reveal-left">
+          <div class="about-img-frame">
+            <img src="about.jpg" alt="About Emaan" />
+            <div class="about-tag">
+              <span>📍</span> Faisalabad, Pakistan
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <p class="section-eyebrow">Get to know me</p>
+          <h2 class="section-title">About Me</h2>
+          <p class="about-desc">
+            I'm a <strong>8th semester Computer Science student</strong> at Government College Women University Faisalabad (GCWUF), with a strong passion for software development across multiple domains.
+          </p>
+          <p class="about-desc">
+            My journey spans <strong>AI-powered Python applications</strong>, <strong>, and <strong>full-stack web systems</strong> using Django and React. I love turning complex problems into clean, functional solutions.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-icon">🎓</span>
+              <div>
+                <strong>Education</strong>
+                <span>BS Computer Science — GCWUF</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🌐</span>
+              <div>
+                <strong>GitHub</strong>
+                <a href="https://github.com/EmaanAarbi" target="_blank">github.com/EmaanAarbi</a>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">💼</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/emaan-aarbi-b254712a7/" target="_blank">Emaan Aarbi</a>
+              </div>
+            </div>
+          </div>
+          <a href="https://github.com/EmaanAarbi" target="_blank" class="btn-primary">View GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills reveal-section">
+      <div class="section-container centered">
+        <p class="section-eyebrow">What I work with</p>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category reveal-up">
+            <div class="skill-cat-header">
+              <span class="skill-icon">🐍</span>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+           
+              <span class="skill-tag">HTML/CSS</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.1s">
+            <div class="skill-cat-header">
+              <span class="skill-icon">⚙️</span>
+              <h3>Frameworks</h3>
+            </div>
+            <div class="skill-tags">
+            
+              <span class="skill-tag">Django REST</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Streamlit</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.2s">
+            <div class="skill-cat-header">
+              <span class="skill-icon">☁️</span>
+              <h3>Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              
+              <span class="skill-tag">Google Gemini AI</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">JWT Auth</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.3s">
+            <div class="skill-cat-header">
+              <span class="skill-icon">🤖</span>
+              <h3>AI / ML</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Whisper (OpenAI)</span>
+              <span class="skill-tag">Gemini API</span>
+              <span class="skill-tag">yt-dlp</span>
+              <span class="skill-tag">NLP Pipelines</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal-section">
+      <div class="section-container centered">
+        <p class="section-eyebrow">What I've built</p>
+        <h2 class="section-title">Projects</h2>
+        <div class="project-container">
+
+          <div class="project-box reveal-up">
+            <img src="FlowTask.jpg" alt="Flow Task" />
+            <div class="project-details">
+              <span class="project-tag">Full-Stack · JavaScript · Python</span>
+              <h2>Flow Task</h2>
+              <p>Full-stack app with Django REST Framework & React. Features JWT auth, user registration/login, task CRUD, assignment, and filtering.</p>
+              <a href="https://github.com/EmaanAarbi/Task-Management-System-Full-Stack-Django-React" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+          </div>
+
+          <div class="project-box reveal-up" style="--delay: 0.1s">
+            <img src="YouTubeVideoSummarizer.jpg" alt="YouTube Video Summarizer" />
+            <div class="project-details">
+              <span class="project-tag">AI · Python · Streamlit · ⭐ 1</span>
+              <h2>YouTube Video Summarizer</h2>
+              <p>Downloads video audio with yt-dlp, transcribes locally using Whisper, then generates bullets, notes, or TL;DR with Google Gemini AI.</p>
+              <a href="https://github.com/EmaanAarbi/Youtube_Video_Summarizer" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+          </div>
+
+          <div class="project-box reveal-up" style="--delay: 0.2s">
+            <img src="AIResumeOptimizer.jpg" alt="AI Resume Optimizer" />
+            <div class="project-details">
+              <span class="project-tag">AI · Python · Streamlit</span>
+              <h2>AI Resume Optimizer</h2>
+              <p>Streamlit app that enhances resumes using Google Gemini AI. Upload PDF/DOCX, add a job description, and get a role-tailored optimized resume.</p>
+              <a href="https://github.com/EmaanAarbi/AI_Resume_Optimizer" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+          </div>
+
+      
+
+
+          <div class="project-box reveal-up" style="--delay: 0.15s">
+            <img src="TaskAPI.jpg" alt="Task API" />
+            <div class="project-details">
+              <span class="project-tag">Backend · Python · REST API</span>
+              <h2>Task API (CRUD Backend)</h2>
+              <p>Backend API with full CRUD operations, modular routing, controller logic, and database integration. Includes Postman collection for API testing.</p>
+              <a href="https://github.com/EmaanAarbi/taskapp" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+          </div>
+
+          <div class="project-box reveal-up" style="--delay: 0.25s">
+            <img src="CLIToDo.jpg" alt="CLI Todo App" />
+            <div class="project-details">
+              <span class="project-tag">CLI · Python</span>
+              <h2>CLI Todo App</h2>
+              <p>A lightweight Python command-line app to add, view, complete, and delete tasks — demonstrating clean Python fundamentals and file I/O handling.</p>
+              <a href="https://github.com/EmaanAarbi/CLI_TODO_APP" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="projects-cta">
+          <a href="https://github.com/EmaanAarbi" target="_blank" class="btn-outline">See All on GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal-section">
+      <div class="section-container">
+        <div class="contact-left reveal-left">
+          <p class="section-eyebrow">Let's connect</p>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="contact-desc">Have a project in mind, want to collaborate, or just want to say hi? I'd love to hear from you.</p>
+          <div class="contact-links">
+            <a href="https://github.com/EmaanAarbi" target="_blank" class="contact-link-item">
+              <span class="cl-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </span>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/EmaanAarbi</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/emaan-aarbi-b254712a7/" target="_blank" class="contact-link-item">
+              <span class="cl-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Emaan Aarbi</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or just say hello..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Send Message ✉</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Emaan<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p>Designed & Developed by <strong>Emaan Aarbi</strong> · GCWUF, Pakistan</p>
+        <div class="footer-links">
+          <a href="https://github.com/EmaanAarbi" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/emaan-aarbi-b254712a7/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
